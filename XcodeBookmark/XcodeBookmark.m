@@ -53,7 +53,7 @@ static id _sharedInstance = nil;
 		NSMenuItem *item = [[NSMenuItem alloc] initWithTitle:@"Clear All Bookmarks"
 													  action:@selector(clearAllBookmarks)
 											   keyEquivalent: f2];
-		[item setKeyEquivalentModifierMask:NSCommandKeyMask | NSShiftKeyMask];
+		[item setKeyEquivalentModifierMask:NSCommandKeyMask | NSAlternateKeyMask];
 		item.target = self;
 		[naviSubmenu insertItem:item atIndex:location];
 	}

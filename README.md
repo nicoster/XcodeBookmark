@@ -11,7 +11,7 @@ Use menu item or shortcuts to toggle/navigate/clear bookmarks like you do in oth
 * Toggle Bookmark `Command + F2`
 * Next Bookmark `F2`
 * Prev Bookmark `Shift + F2`
-* Clear All Bookmarks `Command + Shift + F2`
+* Clear All Bookmarks `Command + Option + F2`
 
 ## Installation
 Download the project and build it, and then relaunch Xcode.
@@ -38,13 +38,10 @@ so it won't stop even if hit.
 * use a different icon for bookmarks
 
 
-## Contact
+## Owner
 
 - [Nick Xiao](http://github.com/nicoster)
 
-## Changes
-
-See [Releases](https://github.com/nicoster/XcodeBookmark/releases).
 
 ## Thanks
 
