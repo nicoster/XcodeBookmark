@@ -1,0 +1,278 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		70BFD2991AE2565E002EBE9F /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70BFD2981AE2565E002EBE9F /* AppKit.framework */; };
+		70BFD29B1AE2565E002EBE9F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70BFD29A1AE2565E002EBE9F /* Foundation.framework */; };
+		70BFD2A01AE2565E002EBE9F /* XcodeBookmark.xcscheme in Resources */ = {isa = PBXBuildFile; fileRef = 70BFD29F1AE2565E002EBE9F /* XcodeBookmark.xcscheme */; };
+		70BFD2A31AE2565E002EBE9F /* XcodeBookmark.m in Sources */ = {isa = PBXBuildFile; fileRef = 70BFD2A21AE2565E002EBE9F /* XcodeBookmark.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		70BFD2951AE2565E002EBE9F /* XcodeBookmark.xcplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XcodeBookmark.xcplugin; sourceTree = BUILT_PRODUCTS_DIR; };
+		70BFD2981AE2565E002EBE9F /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		70BFD29A1AE2565E002EBE9F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		70BFD29E1AE2565E002EBE9F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		70BFD29F1AE2565E002EBE9F /* XcodeBookmark.xcscheme */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = XcodeBookmark.xcscheme; path = XcodeBookmark.xcodeproj/xcshareddata/xcschemes/XcodeBookmark.xcscheme; sourceTree = SOURCE_ROOT; };
+		70BFD2A11AE2565E002EBE9F /* XcodeBookmark.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XcodeBookmark.h; sourceTree = "<group>"; };
+		70BFD2A21AE2565E002EBE9F /* XcodeBookmark.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XcodeBookmark.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		70BFD2931AE2565E002EBE9F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				70BFD2991AE2565E002EBE9F /* AppKit.framework in Frameworks */,
+				70BFD29B1AE2565E002EBE9F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		70BFD28C1AE2565E002EBE9F = {
+			isa = PBXGroup;
+			children = (
+				70BFD29C1AE2565E002EBE9F /* XcodeBookmark */,
+				70BFD2971AE2565E002EBE9F /* Frameworks */,
+				70BFD2961AE2565E002EBE9F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		70BFD2961AE2565E002EBE9F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				70BFD2951AE2565E002EBE9F /* XcodeBookmark.xcplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		70BFD2971AE2565E002EBE9F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				70BFD2981AE2565E002EBE9F /* AppKit.framework */,
+				70BFD29A1AE2565E002EBE9F /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		70BFD29C1AE2565E002EBE9F /* XcodeBookmark */ = {
+			isa = PBXGroup;
+			children = (
+				70BFD2A11AE2565E002EBE9F /* XcodeBookmark.h */,
+				70BFD2A21AE2565E002EBE9F /* XcodeBookmark.m */,
+				70BFD29D1AE2565E002EBE9F /* Supporting Files */,
+			);
+			path = XcodeBookmark;
+			sourceTree = "<group>";
+		};
+		70BFD29D1AE2565E002EBE9F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				70BFD29E1AE2565E002EBE9F /* Info.plist */,
+				70BFD29F1AE2565E002EBE9F /* XcodeBookmark.xcscheme */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		70BFD2941AE2565E002EBE9F /* XcodeBookmark */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 70BFD2A61AE2565E002EBE9F /* Build configuration list for PBXNativeTarget "XcodeBookmark" */;
+			buildPhases = (
+				70BFD2911AE2565E002EBE9F /* Sources */,
+				70BFD2921AE2565E002EBE9F /* Resources */,
+				70BFD2931AE2565E002EBE9F /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = XcodeBookmark;
+			productName = XcodeBookmark;
+			productReference = 70BFD2951AE2565E002EBE9F /* XcodeBookmark.xcplugin */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		70BFD28D1AE2565E002EBE9F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0620;
+				ORGANIZATIONNAME = "Nick Xiao";
+				TargetAttributes = {
+					70BFD2941AE2565E002EBE9F = {
+						CreatedOnToolsVersion = 6.2;
+					};
+				};
+			};
+			buildConfigurationList = 70BFD2901AE2565E002EBE9F /* Build configuration list for PBXProject "XcodeBookmark" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 70BFD28C1AE2565E002EBE9F;
+			productRefGroup = 70BFD2961AE2565E002EBE9F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				70BFD2941AE2565E002EBE9F /* XcodeBookmark */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		70BFD2921AE2565E002EBE9F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				70BFD2A01AE2565E002EBE9F /* XcodeBookmark.xcscheme in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		70BFD2911AE2565E002EBE9F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				70BFD2A31AE2565E002EBE9F /* XcodeBookmark.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		70BFD2A41AE2565E002EBE9F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+			};
+			name = Debug;
+		};
+		70BFD2A51AE2565E002EBE9F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+			};
+			name = Release;
+		};
+		70BFD2A71AE2565E002EBE9F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEPLOYMENT_LOCATION = YES;
+				DSTROOT = "$(HOME)";
+				INFOPLIST_FILE = XcodeBookmark/Info.plist;
+				INSTALL_PATH = "/Library/Application Support/Developer/Shared/Xcode/Plug-ins";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xcplugin;
+			};
+			name = Debug;
+		};
+		70BFD2A81AE2565E002EBE9F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEPLOYMENT_LOCATION = YES;
+				DSTROOT = "$(HOME)";
+				INFOPLIST_FILE = XcodeBookmark/Info.plist;
+				INSTALL_PATH = "/Library/Application Support/Developer/Shared/Xcode/Plug-ins";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xcplugin;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		70BFD2901AE2565E002EBE9F /* Build configuration list for PBXProject "XcodeBookmark" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				70BFD2A41AE2565E002EBE9F /* Debug */,
+				70BFD2A51AE2565E002EBE9F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		70BFD2A61AE2565E002EBE9F /* Build configuration list for PBXNativeTarget "XcodeBookmark" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				70BFD2A71AE2565E002EBE9F /* Debug */,
+				70BFD2A81AE2565E002EBE9F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 70BFD28D1AE2565E002EBE9F /* Project object */;
+}
