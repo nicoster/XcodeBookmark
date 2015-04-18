@@ -10,7 +10,7 @@
 
 @interface XcodeBookmark : NSObject
 
-+ (instancetype)sharedPlugin;
++ (instancetype)sharedInstance;
 
 @property (nonatomic, strong, readonly) NSBundle* bundle;
 @end
