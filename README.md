@@ -1,4 +1,4 @@
-![XcodeBookmark](https://raw.githubusercontent.com/dealforest/Tuna/master/images/tuna.png)
+![XcodeBookmark]
 
 ### Overview
 
