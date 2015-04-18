@@ -11,9 +11,9 @@
 @interface IDEBreakpointManager : NSObject
 
 @property(copy) NSArray *breakpoints;
-@property(readonly) NSMutableArray *mutableBreakpoints;
 
 - (id)fileBreakpointAtDocumentLocation:(id)arg1;
 - (id)createFileBreakpointAtDocumentLocation:(id)arg1;
+- (void)removeBreakpoint:(id)arg1;
 
 @end

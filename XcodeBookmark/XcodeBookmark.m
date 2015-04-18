@@ -103,7 +103,8 @@ static id _sharedInstance = nil;
 	IDEFileBreakpoint *breakpoint = [workspace.breakpointManager fileBreakpointAtDocumentLocation:documentLocation];
 	if (breakpoint)
 	{
-		[workspace.breakpointManager.mutableBreakpoints removeObject:breakpoint];
+//		[workspace.breakpointManager.mutableBreakpoints removeObject:breakpoint];
+		[workspace.breakpointManager removeBreakpoint: breakpoint];
 	}
 	else
 	{
@@ -118,15 +119,16 @@ static id _sharedInstance = nil;
 - (void) clearAllBookmarks
 {
 	IDEWorkspace *workspace = [self currentWorkspace];
-	NSMutableIndexSet *target = [NSMutableIndexSet indexSet];
-	NSUInteger index = 0;
+	NSMutableSet *bookmarks = [NSMutableSet set];
 	for (IDEBreakpoint *breakpoint in workspace.breakpointManager.breakpoints) {
 		if ([breakpoint isKindOfClass:[IDEFileBreakpoint class]] && [breakpoint.condition isEqualTo: BOOKMARK_TAG]) {
-			[target addIndex:index];
+			[bookmarks addObject:breakpoint];
 		}
-		index++;
 	}
-	[workspace.breakpointManager.mutableBreakpoints removeObjectsAtIndexes:target];
+	
+	for (id bookmark in bookmarks) {
+		[workspace.breakpointManager removeBreakpoint: bookmark];
+	}
 }
 
 - (NSUInteger) nextLocation: (NSUInteger)currentLine direction: (BOOL) down
