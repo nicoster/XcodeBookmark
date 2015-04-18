@@ -27,12 +27,12 @@ Remove XcodeBookmark.xcplugin in the `Plug-ins` directory to uninstall it
 
 The bookmarks are actually disabled breakpoints with some dedicated properties with which the bookmarks could be distinguished from the normal breakpoints. These properties are set to prevent the side effects of the breakpoints, so that the bookmarks won't intefere with the debugging process. 
 
-* a condition of '!"bookmark"'
+* a condition of '!"bookmark"'.  
 this is the primary property 
-* a huge ignore count
+* a huge ignore count.  
 so the bookmark won't get hit even if enabled
-* continue running when hit
-so it won't stop even if hit.
+* continue running when hit.  
+    so it won't stop even if hit.
 
 ## To Do
 * use a different icon for bookmarks
