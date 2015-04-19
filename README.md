@@ -14,10 +14,12 @@ Use menu item or shortcuts to toggle/navigate/clear bookmarks like you do in oth
 * Clear All Bookmarks `Command + Option + F2`
 
 ## Installation
-Download the project and build it, and then relaunch Xcode.
+The recommended installation method (and also the simplest) is via the [Alcatraz](http://alcatraz.io/) plugin manager. within which search for XcodeBookmark, click install and you're done!
+
+Or you can download the project and build it, and then relaunch Xcode.
 It will be installed in `~/Library/Application Support/Developer/Shared/Xcode/Plug-ins` automatically.
 
-Remove XcodeBookmark.xcplugin in the `Plug-ins` directory to uninstall it
+To uninstall it, Click the Remove button in Alcatraz or manually remove XcodeBookmark.xcplugin in the `Plug-ins` directory.
 
 ## Requirements
 
@@ -35,7 +37,7 @@ so the bookmark won't get hit even if enabled
 * continue running when hit.  
     so it won't stop even if hit.
 
-## To Do
+## Todo
 * use a different indicator for bookmarks
 * you name it
 
