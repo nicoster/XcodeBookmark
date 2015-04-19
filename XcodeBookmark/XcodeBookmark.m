@@ -103,7 +103,6 @@ static id _sharedInstance = nil;
 	IDEFileBreakpoint *breakpoint = [workspace.breakpointManager fileBreakpointAtDocumentLocation:documentLocation];
 	if (breakpoint)
 	{
-//		[workspace.breakpointManager.mutableBreakpoints removeObject:breakpoint];
 		[workspace.breakpointManager removeBreakpoint: breakpoint];
 	}
 	else
@@ -116,12 +115,24 @@ static id _sharedInstance = nil;
 	}
 }
 
+- (BOOL) isBookmarkInCurrentDocument: (IDEFileBreakpoint*) breakpoint
+{
+	IDEEditorContext *editorContext = [self currentEditorContext];
+	IDEEditorHistoryStack *stack = [editorContext currentHistoryStack];
+	NSString* currentDocument = stack.currentEditorHistoryItem.documentURL.path;
+	
+	return [breakpoint isKindOfClass:[IDEFileBreakpoint class]] &&
+	[breakpoint.condition isEqualTo: BOOKMARK_TAG] &&
+	[breakpoint.location.documentURL.path isEqualToString: currentDocument];
+}
+
 - (void) clearAllBookmarks
 {
 	IDEWorkspace *workspace = [self currentWorkspace];
 	NSMutableSet *bookmarks = [NSMutableSet set];
-	for (IDEBreakpoint *breakpoint in workspace.breakpointManager.breakpoints) {
-		if ([breakpoint isKindOfClass:[IDEFileBreakpoint class]] && [breakpoint.condition isEqualTo: BOOKMARK_TAG]) {
+
+	for (IDEFileBreakpoint *breakpoint in workspace.breakpointManager.breakpoints) {
+		if ([self isBookmarkInCurrentDocument:breakpoint]) {
 			[bookmarks addObject:breakpoint];
 		}
 	}
@@ -140,7 +151,7 @@ static id _sharedInstance = nil;
 		
 		for (IDEFileBreakpoint *breakpoint in [self currentWorkspace].breakpointManager.breakpoints)
 		{
-			if ([breakpoint isKindOfClass:[IDEFileBreakpoint class]] && [breakpoint.condition isEqualTo: BOOKMARK_TAG]) {
+			if ([self isBookmarkInCurrentDocument:breakpoint]) {
 				NSUInteger loc = breakpoint.location.lineRange.location;
 				if (loc < smallest) smallest = loc;
 				if (loc > currentLine && loc - currentLine < distance)
@@ -164,7 +175,7 @@ static id _sharedInstance = nil;
 		
 		for (IDEFileBreakpoint *breakpoint in [self currentWorkspace].breakpointManager.breakpoints)
 		{
-			if ([breakpoint isKindOfClass:[IDEFileBreakpoint class]] && [breakpoint.condition isEqualTo: BOOKMARK_TAG]) {
+			if ([self isBookmarkInCurrentDocument:breakpoint]) {
 				NSUInteger loc = breakpoint.location.lineRange.location;
 				if (loc > largest) largest = loc;
 				if (loc < currentLine && currentLine - loc < distance)
@@ -211,6 +222,7 @@ static id _sharedInstance = nil;
 	NSTextView *textView = [self currentSourceCodeTextView];
 	NSString* content = textView.textStorage.string;
 	
+	// get NSRange by line number
 	__block NSUInteger lineNumber = 1;
 	__block NSUInteger location = 0;
 	__block NSRange range = NSMakeRange(0, 0);
@@ -226,7 +238,6 @@ static id _sharedInstance = nil;
 		location += [line length] + 1;
 	}];
 	
-	//    NSLog(@"range: %lu, %lu", range.location, range.length);
 	[textView setSelectedRange:NSMakeRange(range.location, 0)];
 	[textView scrollRangeToVisible:range];
 	[textView showFindIndicatorForRange:range];

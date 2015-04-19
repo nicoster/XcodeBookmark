@@ -10,6 +10,7 @@
 
 @interface DVTTextDocumentLocation : NSObject
 
+@property(readonly) NSURL *documentURL;
 @property(readonly) struct _NSRange lineRange;
 - (id)initWithDocumentURL:(id)arg1 timestamp:(id)arg2 lineRange:(struct _NSRange)arg3;
 
