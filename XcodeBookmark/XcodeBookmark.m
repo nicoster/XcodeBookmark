@@ -255,7 +255,7 @@ static id _sharedInstance = nil;
 	[content enumerateLinesUsingBlock:^(NSString *line, BOOL *stop) {
 		if (lineNumber == nextBookmark)
 		{
-			range = NSMakeRange(location, [line length]);
+			range = NSMakeRange(location, [line length] ? [line length] : 1);
 			*stop = YES;
 			return;
 		}
