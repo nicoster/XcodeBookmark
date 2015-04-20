@@ -249,10 +249,11 @@ static id _sharedInstance = nil;
 	NSString* content = textView.textStorage.string;
 	
 	// get NSRange by line number
-	__block NSUInteger lineNumber = 1;
+	__block NSUInteger lineNumber = 0;
 	__block NSUInteger location = 0;
 	__block NSRange range = NSMakeRange(0, 0);
 	[content enumerateLinesUsingBlock:^(NSString *line, BOOL *stop) {
+		lineNumber ++;
 		if (lineNumber == nextBookmark)
 		{
 			range = NSMakeRange(location, [line length] ? [line length] : 1);
@@ -260,10 +261,10 @@ static id _sharedInstance = nil;
 			return;
 		}
 		
-		lineNumber ++;
 		location += [line length];
 		
-		while(({unichar lineBreak = [content characterAtIndex:location]; lineBreak == '\r' || lineBreak == '\n';})) location ++;
+		NSString* lineEnding = [content substringWithRange: NSMakeRange(location, MIN(2, [content length] - location))];
+		location += [lineEnding isEqualToString:@"\r\n"] ? 2 : 1;
 	}];
 	
 	[textView setSelectedRange:NSMakeRange(range.location, 0)];
