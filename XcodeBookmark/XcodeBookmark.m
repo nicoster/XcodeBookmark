@@ -261,7 +261,9 @@ static id _sharedInstance = nil;
 		}
 		
 		lineNumber ++;
-		location += [line length] + 1;
+		location += [line length];
+		
+		while(({unichar lineBreak = [content characterAtIndex:location]; lineBreak == '\r' || lineBreak == '\n';})) location ++;
 	}];
 	
 	[textView setSelectedRange:NSMakeRange(range.location, 0)];
