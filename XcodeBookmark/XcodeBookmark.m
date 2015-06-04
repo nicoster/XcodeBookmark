@@ -32,9 +32,24 @@ static id _sharedInstance = nil;
 {
 	self = [super init];
 	if (self) {
-		[self createBookmarkMenuItems];
+        [[NSNotificationCenter defaultCenter] addObserver:self
+                                                 selector:@selector(applicationDidFinishLaunching:)
+                                                     name:NSApplicationDidFinishLaunchingNotification
+                                                   object:nil];
 	}
 	return self;
+}
+
+#pragma mark - dealloc
+
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+#pragma mark - notifications
+
+- (void)applicationDidFinishLaunching:(NSNotification *)notification {
+    [self createBookmarkMenuItems];
 }
 
 #pragma mark - menu
