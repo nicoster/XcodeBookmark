@@ -38,7 +38,8 @@ so the bookmark won't get hit even if enabled
     so it won't stop even if hit.
 
 ## Todo
-* use a different indicator for bookmarks
+* jump between bookmarks in multiple files
+* use a dedicated indicator for bookmarks
 * you name it
 
 ## Owner
