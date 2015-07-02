@@ -1,7 +1,7 @@
 ### Overview
 
 A plugin that allows you to use bookmarks in Xcode!  
-I know you all have waited for soooo long for a bookmark plugin for Xcode.
+I know you all have been waiting for soooo long for a bookmark plugin for Xcode.
 
 
 ## Usage
