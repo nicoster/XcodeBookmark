@@ -44,7 +44,7 @@ so the bookmark won't get hit even if enabled
 
 ## Owner
 
-- [Nick Xiao](http://github.com/nicoster) [nicoster@](nicoster@gmail.com)
+- [Nick Xiao](http://github.com/nicoster) [nicoster@](mailto:nicoster@gmail.com)
 
 
 ## Thanks
